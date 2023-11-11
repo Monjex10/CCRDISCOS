@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/ico.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FECHAS</title>
+  </head>
+  <body>
+    <h1 class="titulo">Creedence Clearwater Revival</h1>
+    <p>Gira Internacional 2024 (Argentina)</p>
+    <div id="barrainicio">
+      <a class="barra" href="../index.html" id="logout" >Salir</a>
+      <img id="avatar" src="../img/avatar.jpg" alt="Avatar" />
+      <p id="nombre-usuario">John Fogerty</p>
+    </div>
+    <div class="event-container">
+      <ul class="event-list">
+        <li>
+          <span class="event-date"> 23 de Enero </span>
+          <span class="event-city"> Mendoza </span>
+          <button onclick="(`Mendoza`, `Agotadas`)" class="event-button">
+            Agotadas
+          </button>
+        </li>
+        <li>
+          <span class="event-date"> 25 de enero </span>
+          <span class="event-city"> Cordoba </span>
+          <button onclick="Entradas(`Cordoba`)" class="event-button">
+            Entradas
+          </button>
+        </li>
+        <li>
+          <span class="event-date"> 4 de Febrero</span>
+          <span class="event-city"> Neuquen </span>
+          <button onclick="Entradas(`Neuquen`)" class="event-button">
+            Entradas
+          </button>
+        </li>
+        <li>
+          <span class="event-date"> 10 de Marzo</span>
+          <span class="event-city"> Buenos Aires</span>
+          <button onclick="Entradas(`Buenos Aires`)" class="event-button">
+            Entradas
+          </button>
+        </li>
+        <li>
+          <span class="event-date">20 de Marzo</span>
+          <span class="event-city"> Salta </span>
+          <button onclick="Entradas(`San Pablo`)" class="event-button">
+            Entradas
+          </button>
+        </li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="tour.js"></script>
+  </body>
+</html>

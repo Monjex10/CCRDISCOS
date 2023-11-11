@@ -1,0 +1,91 @@
+body {
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+  }
+  
+  .titulo {
+    font-size: 38px;
+    color: rgb(186, 121, 73);
+    background-color: rgb(53, 47, 54);
+    text-align: center;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+  
+   
+  p {
+    font-size: 18px;
+    color: coral;
+    text-align: center;
+  }
+  
+  #contenia {
+    text-align: center;
+    width: 200px;
+    background-color: rgb(3, 114, 114);
+    margin: 2px auto;
+    border-radius: 30rem;
+  }
+  
+   li {
+    width: 500px;
+    background-color: rgb(26, 33, 33);
+    margin: 0px auto;
+    border-radius: 2rem;
+    text-align: center;
+    color: aqua;
+  }
+  
+   
+  #nuevoalbum {
+    background-color: antiquewhite;
+  }
+  
+  
+
+  span {
+    margin-left: 450px;
+    width: 500px;
+    background-color: rgb(26, 33, 33);
+    border-radius: 2rem;
+    text-align: center;
+    color: aqua;
+  }
+  
+  
+  #barrainicio {
+    height: 350px;
+    width: 150px;
+    position: sticky;
+    top: 0px;
+    float: right;
+    margin-top: 100px;
+    padding-top: 40px;
+    background-color: rgb(70, 69, 66);
+    
+  }
+    
+  #barrainicio img {
+    border-radius: 60%;
+  }
+  
+  .barra {
+    border-style: dotted;
+    padding: 8px;
+    font-size: 18px;
+    display: block;
+    cursor: pointer;
+  }
+
+  #al1 {
+    margin-left: 42%;
+    width: 250px;
+
+  }
+
+  .eliminar {
+    display: none;
+  }
+
+  i {
+    color: brown;
+  }

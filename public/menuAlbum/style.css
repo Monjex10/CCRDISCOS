@@ -1,0 +1,114 @@
+body {
+  background-image: url(../img/flex3.jpeg);
+  background-size: cover;
+}
+
+#barrainicio {
+  height: 200px;
+  width: 200px;
+  position: sticky;
+  top: 0px;
+  float: right;
+  margin-top: 100px;
+  padding-top: 40px;
+  background-color: rgb(70, 69, 66);
+  /* border-radius: 30%; */
+  flex-direction: row;
+}
+
+.barra {
+  color: black;
+  text-align: center;
+  padding: 8px;
+  font-size: 18px;
+  display: block;
+}
+
+#desalbum {
+  color: #32332f;
+  font-size: 20px;
+}
+
+.imgalbum {
+  cursor:pointer;
+  border-color: 2px rgb(83, 78, 76);
+  padding: 0px 5px 0px 5px;
+  width: 300px;
+  position: relative;
+  top: 50px;
+  left: 10px;
+  border-radius: 100%;
+  
+}
+
+.medio {
+  width: 250px;
+  position: static;
+  top: 100px;
+  left: 450px;
+}
+
+#al1 {
+  width: 300px;
+  position: relative;
+  top: 10px;
+  left: 600px;
+}
+
+#al2 {
+  width: 300px;
+  position: relative;
+  top: 10px;
+  left: 600px;
+}
+
+.titulo {
+  font-size: 38px;
+  color: rgb(186, 121, 73);
+  background-color: rgb(53, 47, 54);
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+p {
+  font-size: 18px;
+  color: coral;
+  text-align: center;
+}
+
+#ava {
+  height: 115px;
+  border-radius: 50%;
+}
+
+.albums {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 70%px;
+  flex-wrap: wrap;
+  margin: 15px;
+}
+
+.albums-individual {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 70%px;
+  flex-wrap: wrap;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.albums img {
+  width: 230px;
+  height: 230px;
+  border: 6px solid #333;
+  border-radius: 50%;
+}
+
+i {
+  color: rgb(255, 140, 0);
+  width: 30px;
+}
+

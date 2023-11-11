@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/ico.jpg" />
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regristo</title>
+</head>
+<body>
+    <a href="../index.html">
+        <h2>Salir</h2>
+      </a>
+    <div id="regis">
+    <form action="https://formspree.io/f/xeqbavkz" method="post">
+            <label class="reg"  for="nombre"></label> 
+            <input type="text" placeholder="Nombre" id="nombre" required>
+            <br>
+            <br>
+            <label class="reg"   for="apellido"></label>
+            <input type="text" placeholder="Apellido"  id="apellido"required>
+            <br>
+            <br>
+            <label class="reg"  for="enmail"></label>
+            <input type="email" placeholder="hola.gmail.com" id="email" required>
+            <br>
+            <br>
+            <label class="reg"  for="password"></label>
+            <input type="password" placeholder="******" id="password" required >
+            <br>
+            <br>   
+            <label for="">
+            <input type="submit" value="Registrarse" id="buttonRegister" required>
+            </label>
+            <br>
+            <br>
+    </div>        
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="registro.js"></script>
+</body>
+</html>

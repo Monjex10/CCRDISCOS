@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/ico.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Álbum</title>
+  </head>
+  <body>
+    <a href="../menuAlbum/menualbum.html">
+      <h2>Volver</h2>
+    </a>
+    <div>
+      <form method="post">
+        <label for="title"
+          >Título
+          <input id="title" type="text" placeholder="Título" required />
+        </label>
+        <br />
+        <br />
+        <label for="anioLanzamiento"
+          >Año
+          <input id="anioLanzamiento" type="text" placeholder="1980" required />
+        </label>
+        <br />
+        <br />
+        <label for="description"
+          >Descripción
+          <br />
+          <textarea
+            id="description"
+            name="descripcion"
+            cols="30"
+            rows="10"
+            required
+            style="resize: none"
+          ></textarea>
+        </label>
+        <br />
+        <br />
+        <label for="image"
+          >Cargar una imagen del disco
+          <input
+            id="image"
+            type="text"
+            placeholder="URL de la imagen"
+            required
+          />
+        </label>
+        <br />
+        <br />
+        <input class="add-button" type="submit" />
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="agregarAlbum.js" type="module"></script>
+</body>
+</html>
