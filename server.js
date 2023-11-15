@@ -5,13 +5,13 @@ const cookieParser = require("cookie-parser");
 const dotenv = require ("dotenv");
 dotenv.config()
 
-const USERMDB = process.env.USERMDB;
+const usermdb = process.env.USERMDB;
 const passw = process.env.PASSWORD;
 const port = process.env.PORT;
 
 const mongoose = require("mongoose");
 const url =
-  `mongodb+srv://${USERMDB}:${passw}@cursointro.yg5v5ef.mongodb.net/?retryWrites=true&w=majority`;
+  `mongodb+srv://${usermdb}:${passw}@cursointro.yg5v5ef.mongodb.net/?retryWrites=true&w=majority`;
 
   const routes = require("./routes/index");
 

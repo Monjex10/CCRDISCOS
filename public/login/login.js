@@ -13,7 +13,7 @@
     getInputValues();
     try {
       
-      const response = await axios.post("http://localhost:3000/login", objectToSend);
+      const response = await axios.post("../login", objectToSend);
       console.log(response, "respuesta");
       redirect()
     } catch (error) {

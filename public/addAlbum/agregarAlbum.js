@@ -31,7 +31,7 @@ const addAlbum = async (e) => {
       icon: "success",
       button: "Continuar",
     });
-    window.location.href= "../menuAlbum/menuAlbum.html"
+    window.location.href= "../menuAlbum/menualbum.html"
   } catch (error) {
     swal("No se pudo agregar el álbum, inténtelo nuevamente");
   }

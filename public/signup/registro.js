@@ -22,9 +22,9 @@ function getInputValues() {
 const userRegister = async (e) => {
   e.preventDefault();
   const objectToSend = getInputValues();
-  console.log(objectToSend, "OBJECT");
+  // console.log(objectToSend, "OBJECT");
   try {
-    await axios.post("http://localhost:3000/createuser", objectToSend);
+    await axios.post("../createuser", objectToSend);
     window.location.href = "../login/login.html";
     alert("Te has resgitrado correctamente, debes iniciar sesion");
   } catch (error) {
