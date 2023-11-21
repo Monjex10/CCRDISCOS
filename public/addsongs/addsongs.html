@@ -1,53 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" type="image/x-icon" href="../img/ico.jpg" />
-    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/ico.jpg" />
     <title>Álbum</title>
   </head>
   <body>
     <a href="../album1/album1.html">
       <h2>Volver</h2>
     </a>
-    <div>
+    <div id="estiloCancion">
       <form method="put">
         <label for="titulo">Título: </label>
-        <input
-          type="text"
-          id="titulo"
-          name="titulo"
-          placeholder="Titulo"
-          required
-        />
+            <input type="text" id="titulo" name="titulo"  placeholder="Titulo" required />
         <br />
         <br />
         <label for="duracion"> Duración: </label>
-        <input
-          type="text"
-          id="duracion"
-          name="duracion"
-          placeholder="4:23"
-          required
-        />
+            <input type="text" id="duracion" name="duracion" placeholder="4:23" required />
         <br />
         <br />
         <label for="link"> Link canción: </label>
-        <input
-          type="url"
-          id="link"
-          name="link"
-          required
-          placeholder="https://..."
-        />
+            <input type="url" id="link" name="link" required placeholder="https://..." />
         <br />
         <br />
-        <input class="add-button" type="submit" id="agregar" />
+        <input class="add-button" type="submit" id="agregar"/>
       </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="script.js" type="module"></script>
+    <script src="script.js"></script>
   </body>
 </html>

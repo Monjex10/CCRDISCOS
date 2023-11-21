@@ -1,26 +1,62 @@
 
-// import logOut from "../utils/utils.js";
+const botonAgregarCanciones = document.querySelector("#addSongs")
 
 addSongs.addEventListener("click", () => {
-  console.log("=====> YA HICE CLICK!!!!!!");
-  redirect(idAlbum._id, `../addSongs/addSongs.html`);
+  window.location.href = `../addsongs/addsongs.html?album=${idAlbum}`;
 });
 
 const query = window.location.search.split("=")
-console.log(query);
 const idAlbum = query[1]
-console.log(idAlbum);
 const nombre = document.querySelector("#nombre-usuario");
+
+function renderSongs(album) {
+  // creamos los elementos HTML
+  const li = document.createElement("li");
+  const spanSongTitle = document.createElement("span");
+  const spanSongDuration = document.createElement("span");
+  const spanSongIcon = document.createElement("span");
+  const iconTrash = document.createElement("i");
+  const iconMusic = document.createElement("i");
+
+  // // agregamos los estilos
+  // spanSongTitle.classList.add("tituloCancion");
+  // spanSongDuration.classList.add("duracionCancion");
+  // spanSongIcon.classList.add("iconosCancion");
+  // iconTrash.classList.add("fas");
+  // iconTrash.classList.add("fa-trash-alt");
+  // iconTrash.setAttribute("id", "delete");
+  // iconMusic.classList.add("fas");
+  // iconMusic.classList.add("fa-music");
+
+  // agregamos la info de las canciones
+  spanSongTitle.textContent = album.titulo;
+  spanSongDuration.textContent = album.duracion;
+  numCancion++;
+
+  // agregamos los elementos al HTML
+  li.appendChild(spanSongTitle);
+  li.appendChild(spanSongDuration);
+  spanSongIcon.appendChild(iconTrash);
+  spanSongIcon.appendChild(iconMusic);
+  li.appendChild(spanSongIcon);
+  ul.appendChild(li);
+
+  // agregamos el addEventListener
+  iconMusic.addEventListener("click", () => {
+    window.open(album.link, "_blank");
+  });
+}
+
 
 const deleteSong = async (album, cancion) => {
   try {
     await axios.put(
-      `../song/delete/${album}?idSong=${cancion}`
+      `../../../song/delete/${album}?idSong=${cancion}`
     );
     await swal("cancion eliminada correctamente");
     ul.innerHTML = ""; // limpia la lista actual
-    const response = await axios.get(`../album1/${idAlbum}`);
-    const canciones = response.data.canciones;
+    const respuesta = await axios.get(`../../../album/${idAlbum}`);
+    const canciones = respuesta.data.canciones;
     canciones.map((cancion, index) => {
       renderSongs(cancion, index);
     });
@@ -34,6 +70,8 @@ const deleteSong = async (album, cancion) => {
     console.log(error);
   }
 };
+
+
 
 const onLoad = async () => {
   try {
@@ -75,4 +113,6 @@ const getAlbum = async () => {
     console.log(error);
   }
 }
+
+
 

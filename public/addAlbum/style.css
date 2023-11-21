@@ -40,7 +40,7 @@ input[type="submit"]:hover {
     background-color: #595a5b; 
 }
 
-div {
+#estiloAlbum {
     display: flex;
     justify-content: center;
     width: 30%;

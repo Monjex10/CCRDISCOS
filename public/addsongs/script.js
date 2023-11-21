@@ -1,55 +1,17 @@
-// const logOutButton = document.querySelector("#logout")
-// const query = window.location.search.split("=");
-// console.log(query);
-// const idAlbum = query[1]
-// console.log(idAlbum);
-
-
-// const getAlbum = async () => {
-//   try {
-//     const { data } = await axios.get(`../../album1/${idAlbum}`);
-//     album = data;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
-// getAlbum();
-
-// const addSong = async (e) => {
-//   e.preventDefault();
-//   const objectToSend = getInputValues();
- 
-//   try {
-//     await axios.put(`../song/${idAlbum}`, objectToSend);
-//     await swal("cancion agregada correctamente");
-//     window.location.href = "../index.html"
-//   } catch (error) {
-//     swal("Error al agregar la cancion");
-//   }
-// };
-
-// agregarSong.addEventListener("click", (e) => {
-//   addSong(e);
-// });
-
-// // logOutButton.addEventListener("click", () => {
-// //   logOut()
-// // })
-
 const query = window.location.search.split("=");
-const idAlbum = query[1];
+const idAlbum = query[1]
+
 let album;
 const agregarSong = document.querySelector("#agregar");
 
 const redirect = (id) => {
-  window.location.href = `../Album/Album.html?album=${id}`;
+  window.location.href = `../album1/album1.html?album=${id}`;
 };
 
 // Generamos una funcion para guardar los valores que ingresa el usuario
 function getInputValues() {
   // Obtener los input del form
-  const titleInput = document.getElementById("titulo");
+  const titleInput = document.getElementById("titulo"); 
   const duracionInput = document.getElementById("duracion");
   const linkInput = document.getElementById("link");
 
@@ -66,34 +28,44 @@ function getInputValues() {
   };
 }
 
-const getAlbum = async () => {
-  try {
-    const { data } = await axios.get(`../../../album/${idAlbum}`);
-    album = data;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-getAlbum();
-
 const addSong = async (e) => {
   e.preventDefault();
   const objectToSend = getInputValues();
+ 
   try {
-    await axios.put(`../../../song/${idAlbum}`, objectToSend);
+    await axios.put(`../song/${idAlbum}`, objectToSend);
+    console.log(cancion);
     await swal({
-      title: "Canción agregada correctamente!",
-      text: `Canción: ${objectToSend.titulo}`,
+      title: "Cancion agregada correctamente!",
+      // text: `Álbum: ${album.data.titulo}`,
       icon: "success",
+      button: "Continuar",
     });
-    window.location.href = `../Album/Album.html?album=${idAlbum}`;
+    window.location.href= "../album1/album1.html"
   } catch (error) {
-    console.log(error);
-    swal("Error al agregar la canción");
-  }
-};
+    swal("No se pudo agregar el álbum, inténtelo nuevamente");
+  }};
 
 agregarSong.addEventListener("click", (e) => {
   addSong(e);
 });
+
+const getAlbum = async () => {
+  try {
+    const response = await axios.get(`../album/${idAlbum}`)
+    console.log(idAlbum);
+  } catch (error) {
+    console.log(error);
+  }
+}
+// const getAlbum = async () => {
+//   try {
+//     const { data } = await axios.get(`../album/${idAlbum}`);
+//     album = data;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+  
+getAlbum();
+

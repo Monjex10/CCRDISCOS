@@ -40,7 +40,7 @@ const renderAlbums = (album) => {
   div.appendChild(iconTrash);
   divAlbums.appendChild(div);
 };
- 
+  
   
 const getAlbums = async () => {
   try {
