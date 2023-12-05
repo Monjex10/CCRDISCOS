@@ -28,36 +28,45 @@ function getInputValues() {
   };
 }
 
+const getAlbum = async () => {
+  try {
+    const { data } = await axios.get(`../../../album/${idAlbum}`);
+    album = data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+getAlbum();
+
 const addSong = async (e) => {
   e.preventDefault();
   const objectToSend = getInputValues();
- 
   try {
     await axios.put(`../song/${idAlbum}`, objectToSend);
-    console.log(cancion);
     await swal({
-      title: "Cancion agregada correctamente!",
-      // text: `Álbum: ${album.data.titulo}`,
+      title: "Canción agregada correctamente!",
+      text: `Canción: ${objectToSend.titulo}`,
       icon: "success",
-      button: "Continuar",
     });
-    window.location.href= "../album1/album1.html"
+    window.location.href = `../album1/album1.html?album=${idAlbum}`;
   } catch (error) {
-    swal("No se pudo agregar el álbum, inténtelo nuevamente");
-  }};
-
+    console.log(error);
+    swal("Error al agregar la canción");
+  }
+};
 agregarSong.addEventListener("click", (e) => {
   addSong(e);
 });
 
-const getAlbum = async () => {
-  try {
-    const response = await axios.get(`../album/${idAlbum}`)
-    console.log(idAlbum);
-  } catch (error) {
-    console.log(error);
-  }
-}
+// const getAlbum = async () => {
+//   try {
+//     const response = await axios.get(`../album/${idAlbum}`)
+//     console.log(idAlbum);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 // const getAlbum = async () => {
 //   try {
 //     const { data } = await axios.get(`../album/${idAlbum}`);
@@ -67,5 +76,4 @@ const getAlbum = async () => {
 //   }
 // };
   
-getAlbum();
 

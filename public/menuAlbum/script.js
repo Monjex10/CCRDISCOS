@@ -52,6 +52,7 @@ const getAlbums = async () => {
     trash.forEach((icon, index) => {
       icon.addEventListener("click", () => {
         deleteAlbum(response.data[index]._id);
+        location.reload();
       });
     });
   } catch (error) {

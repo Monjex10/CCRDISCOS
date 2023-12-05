@@ -27,7 +27,7 @@ const addAlbum = async (e) => {
     let album = await axios.post("../album/agregar", objectToSend);
     await swal({
       title: "Álbum agregado correctamente!",
-      text: `Álbum: ${album.data.titulo}`,
+      text: `Álbum: ${objectToSend.titulo}`,
       icon: "success",
       button: "Continuar",
     });

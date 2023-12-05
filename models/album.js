@@ -13,7 +13,7 @@ const Album = new mongoose.Schema({
     required: [true, "la fecha de lanzamiento es requerida"],
     min: 1,
   },
-  canciones: [{ titulo: { type: String }, duracion: { type: String } }],
+  canciones: [{ titulo: { type: String }, duracion: { type: String }, link: {type: String} }],
   portada: { type: String },
 });
 

@@ -33,6 +33,8 @@ body {
     border-radius: 2rem;
     text-align: center;
     color: aqua;
+    margin: 2px auto;
+
   }
   
    
@@ -42,15 +44,20 @@ body {
   
   
 
-  span {
-    margin-left: 450px;
-    width: 500px;
+  .spantitulo {
+    margin-right: 30px;
+    width: 200px;
     background-color: rgb(26, 33, 33);
     border-radius: 2rem;
     text-align: center;
-    color: aqua;
+    color: rgb(82, 106, 106);
+    border-right: 15px;
   }
   
+  .spanduracion {
+    margin-right: 30px;
+    border-right: 15px;
+  }
   
   #barrainicio {
     height: 350px;
@@ -86,6 +93,8 @@ body {
     display: none;
   }
 
-  i {
-    color: brown;
+ 
+  .fa-trash-alt{
+    margin-right: 15px;
   }
+  
